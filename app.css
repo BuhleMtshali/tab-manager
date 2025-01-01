@@ -2,6 +2,7 @@
     --pale-blue:#c9d7fa;
     --peach-pink: #ff6961;
     --dark-blue:#253b6e;
+    --bg-color: #ffffff;
 
 }
 *:focus{
@@ -15,10 +16,45 @@ body{
 }
 
 .container{
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 500px;
-    margin: 0 auto;
+    margin: 40px auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+h1{
+    color: var(--peach-pink);
+    margin: 15px 0;
+}
+
+.input-bar{
+    width: 285px;
+    padding: 13px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--pale-blue);
+}
+
+::placeholder{
+    color: var(--dark-blue);
+}
+
+button{
+padding: 10px 15px;
+border-radius: 9px;
+background-color: var(--peach-pink);
+cursor: pointer;
+color: var(--bg-color);
+font-weight: bold;
+border: none;
+transition: all 0.3s ease-in-out;
+}
+
+button:hover{
+    background-color: var(--pale-blue);
+    color: var(--dark-blue);
 }
