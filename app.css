@@ -4,6 +4,21 @@
     --dark-blue:#253b6e;
 
 }
+*:focus{
+    outline: none;
+}
+
 body{
     font-family: "Inter Tight", serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
 }
