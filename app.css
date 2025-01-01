@@ -66,3 +66,8 @@ button:hover{
 ul{
     list-style-type: none;
 }
+
+ul li{
+    color: var(--peach-pink);
+    font-size: 1.5rem;
+}
