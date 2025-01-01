@@ -1,6 +1,6 @@
 :root{
     --pale-blue:#c9d7fa;
-    --peach-pink: #ff6961;
+    --peach-pink: #fb6f92;
     --dark-blue:#253b6e;
     --bg-color: #ffffff;
 
@@ -40,7 +40,9 @@ h1{
 }
 
 ::placeholder{
-    color: var(--dark-blue);
+    color: var(--peach-pink);
+    font-size: 16px;
+    font-weight: bold;
 }
 
 button{
@@ -56,5 +58,8 @@ transition: all 0.3s ease-in-out;
 
 button:hover{
     background-color: var(--pale-blue);
-    color: var(--dark-blue);
+    color: var(--bg-color);
+}
+ul{
+    list-style-type: none;
 }
