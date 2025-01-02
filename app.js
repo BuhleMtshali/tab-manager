@@ -10,10 +10,14 @@ const tabsFromLocalStorage = JSON.parse(localStorage.getItem('myTabs'));
 
 //first the function to push input value to the array
 saveLinkBtn.addEventListener('click', () => {
+    if (inputElement.value) {
     tabsArray.push(inputElement.value);
     inputElement.value = '';
     localStorage.setItem('myTabs', JSON.stringify(tabsArray));
     render(tabsArray);
+    } else {
+        alert('Please enter link')
+    }
 })
 
 

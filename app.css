@@ -27,6 +27,7 @@ body{
     padding: 10px;
     border-radius: 15px;
     height: auto;
+    max-width: 100%;
 }
 
 h1{
