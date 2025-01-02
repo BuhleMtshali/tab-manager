@@ -86,6 +86,7 @@ ul li a{
     word-wrap: break-word;
     white-space: normal;
     overflow-wrap: anywhere;
+    margin-bottom: 7px;
 }
 
 a:hover{
