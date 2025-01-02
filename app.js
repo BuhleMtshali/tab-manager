@@ -27,7 +27,11 @@ function render(items){
     for (let i = 0; i < items.length; i++){
         listItems += `
                        <div class="lists">
-                        <li><a target='_blank' href='${items[i]}'>${items[i]}</a></li>
+                        <li>
+                        <a target='_blank' href='${items[i]}'>
+                        ${items[i]}
+                        </a>
+                        </li>
                         <span class="material-icons delete-item">
                         delete_outline
                         </span>
