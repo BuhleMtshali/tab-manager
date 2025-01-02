@@ -24,7 +24,7 @@ function render(items){
         listItems += `
                        <div class="lists">
                         <li><a target='_blank' href='${items[i]}'>${items[i]}</a></li>
-                        <span class="material-icons" id="delete-item">
+                        <span class="material-icons delete-item">
                         delete_outline
                         </span>
                         </div> 
@@ -35,19 +35,24 @@ function render(items){
 
     
 //CREATING AN EVENT FOR THE DELETE EACH ITEM BUTTON
-document.getElementById('delete-item').addEventListener('click', () => {
-    localStorage.removeItem('myTabs');
-    render(tabsArray)
-    
+document.querySelectorAll('.delete-item').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      const index = event.target.dataset.index; // Get the index of the item from the data attribute
+      tabsArray.splice(index, 1) //remove the item from the array
+      localStorage.setItem('myTabs', JSON.stringify(tabsArray)) //updating local storage
+      render(tabsArray)
+    })
 })
 
-    
+
 }
+
 
 //condition for checking if there are tabs in local storage
 if(tabsFromLocalStorage){
     tabsArray = tabsFromLocalStorage;
     render(tabsArray)
+    console.table(tabsArray)
 }
 
 
