@@ -5,12 +5,14 @@ let ulContainer = document.getElementById('list-container')
 const saveLinkBtn = document.getElementById('save-url');
 const saveTabBtn = document.getElementById('save-tab');
 const clearAllBtn = document.getElementById('clear-all');
+const tabsFromLocalStorage = JSON.parse(localStorage.getItem('myTabs'));
 
 
 //first the function to push input value to the array
 saveLinkBtn.addEventListener('click', () => {
     tabsArray.push(inputElement.value);
     inputElement.value = '';
+    localStorage.setItem('myTabs', JSON.stringify(tabsArray));
     render(tabsArray);
 })
 
@@ -21,7 +23,7 @@ function render(items){
     for (let i = 0; i < items.length; i++){
         listItems += `
                        <div class="lists">
-                        <li>${items[i]}</li>
+                        <li><a target='_blank' href='${items[i]}'>${items[i]}</a></li>
                         <span class="material-icons" id="delete-item">
                         delete_outline
                         </span>
@@ -40,3 +42,8 @@ document.getElementById('delete-item').addEventListener('click', () => {
     
 }
 
+//condition for checking if there are tabs in local storage
+if(tabsFromLocalStorage){
+    tabsArray = tabsFromLocalStorage;
+    render(tabsArray)
+}
