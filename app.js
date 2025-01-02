@@ -37,7 +37,7 @@ function render(items){
 //CREATING AN EVENT FOR THE DELETE EACH ITEM BUTTON
 document.querySelectorAll('.delete-item').forEach((button) => {
     button.addEventListener('click', (event) => {
-      const index = event.target.dataset.index; // Get the index of the item from the data attribute
+      const index = event.target.dataset.index; // Get the index of the item from the data attribute, the event is for the each button selected
       tabsArray.splice(index, 1) //remove the item from the array
       localStorage.setItem('myTabs', JSON.stringify(tabsArray)) //updating local storage
       render(tabsArray)
@@ -61,4 +61,14 @@ clearAllBtn.addEventListener('click', () => {
     localStorage.clear();
     tabsArray = [];
     render(tabsArray)
+})
+
+
+//function for the save tab button
+saveTabBtn.addEventListener('click', () => {
+    chrome.tabs.query({active: true, currentWindow: true}, ((tabs) => {
+        tabsArray.push(tabs[0].url);
+        localStorage.setItem('myTabs', JSON.stringify(tabsArray));
+        render(tabsArray)
+    }))
 })
