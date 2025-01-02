@@ -36,6 +36,8 @@ function render(items){
     
 //CREATING AN EVENT FOR THE DELETE EACH ITEM BUTTON
 document.getElementById('delete-item').addEventListener('click', () => {
+    localStorage.removeItem('myTabs');
+    render(tabsArray)
     
 })
 
@@ -47,3 +49,11 @@ if(tabsFromLocalStorage){
     tabsArray = tabsFromLocalStorage;
     render(tabsArray)
 }
+
+
+//FUNCTION FOR CLEAR ALL BUTTON
+clearAllBtn.addEventListener('click', () => {
+    localStorage.clear();
+    tabsArray = [];
+    render(tabsArray)
+})
