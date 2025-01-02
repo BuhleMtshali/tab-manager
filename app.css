@@ -36,7 +36,7 @@ h1{
 }
 
 .input-bar{
-    /* width: 287px; */
+    width: 287px;
     padding: 13px 15px;
     margin-bottom: 10px;
     border-radius: 11px;
@@ -70,7 +70,7 @@ button:hover{
     color: var(--bg-color);
 }
 ul{
-    list-style-type:circle;
+    list-style-type:decimal;
 }
 .lists{
     display: flex;
@@ -78,7 +78,7 @@ ul{
 }
 
 ul li a{
-    color: var(--peach-pink);
+    color: var(--dark-blue);
     font-size: 1.5rem;
     padding-right: 8px;
     display: block;
@@ -86,7 +86,8 @@ ul li a{
     word-wrap: break-word;
     white-space: normal;
     overflow-wrap: anywhere;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 a:hover{
@@ -94,7 +95,7 @@ a:hover{
 }
 
 .material-icons{
-    color: var(--dark-blue);
+    color: var(--peach-pink);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     font-weight: bolder;
