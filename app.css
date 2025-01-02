@@ -70,14 +70,10 @@ button:hover{
     color: var(--bg-color);
 }
 ul{
-    list-style-type:decimal;
-}
-.lists{
-    display: flex;
-    align-items: center;
+    list-style-type: circle;
 }
 
-li{
+.lists{
     display: flex;
     align-items: center;
 }
