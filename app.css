@@ -36,7 +36,7 @@ h1{
 }
 
 .input-bar{
-    width: 287px;
+    /* width: 287px; */
     padding: 13px 15px;
     margin-bottom: 10px;
     border-radius: 11px;
@@ -83,6 +83,9 @@ ul li a{
     padding-right: 8px;
     display: block;
     text-decoration: none;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 a:hover{
