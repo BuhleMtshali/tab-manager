@@ -2,7 +2,8 @@
     --pale-blue:#c9d7fa;
     --peach-pink: #fb6f92;
     --dark-blue:#253b6e;
-    --bg-color: #ffffff;
+    --bg-color: #f5f3f4;
+    --delete-color: #ff0a54;
 
 }
 *:focus{
@@ -13,6 +14,7 @@ body{
     font-family: "Inter Tight", serif;
     box-sizing: border-box;
     user-select: none;
+    background-color: var(--bg-color);
 }
 
 .container{
@@ -38,6 +40,7 @@ h1{
     margin-bottom: 10px;
     border-radius: 11px;
     border: 4px solid var(--pale-blue);
+    background-color: var(--bg-color);
     color: var(--peach-pink);
     font-weight: bold;
     font-size: 16px;
@@ -66,10 +69,24 @@ button:hover{
     color: var(--bg-color);
 }
 ul{
-    list-style-type: none;
+    list-style-type:circle;
+    display: flex;
+    align-items: center;
 }
 
 ul li{
     color: var(--peach-pink);
     font-size: 1.5rem;
+    padding-right: 8px;
+}
+
+.material-icons{
+    color: var(--dark-blue);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: bolder;
+}
+
+.material-icons:hover{
+    color: var(--delete-color);
 }
