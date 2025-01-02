@@ -22,12 +22,21 @@ function render(items){
         listItems += `
                        <div class="lists">
                         <li>${items[i]}</li>
-                        <span class="material-icons">
+                        <span class="material-icons" id="delete-item">
                         delete_outline
                         </span>
                         </div> 
                     `
     }
+    
+    ulContainer.innerHTML = listItems; //rendering out the items
 
-    ulContainer.innerHTML = listItems;
+    
+//CREATING AN EVENT FOR THE DELETE EACH ITEM BUTTON
+document.getElementById('delete-item').addEventListener('click', () => {
+    
+})
+
+    
 }
+
