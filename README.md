@@ -37,7 +37,7 @@ This app is packaged as a Chrome extension, making tab management even more conv
 
 1. **Clone the Repository:**
 ```sh
-git clone <https://github.com/BuhleMtshali/tab-manager.git>
+git clone https://github.com/BuhleMtshali/tab-manager.git
 ```
 
 2. **Load as a Chrome Extension:**
